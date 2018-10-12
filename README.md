@@ -8,9 +8,11 @@ See documentation on the ros wiki: http://www.ros.org/wiki/razer_hydra
 
 
 ## Installation
+- use `catkin_make` for compilation
 
 - copy the `99-hydra.rules` file to `/etc/udev/rules.d`
 ```bash
+roscd razer_hydra
 sudo cp config/99-hydra.rules /etc/udev/rules.d
 ```
 
@@ -19,5 +21,3 @@ sudo cp config/99-hydra.rules /etc/udev/rules.d
 ```bash
 sudo service udev restart
 ```
-
-- use `catkin_make` for compilation
