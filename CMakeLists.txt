@@ -40,13 +40,14 @@ install(DIRECTORY include/${PROJECT_NAME}/
 install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 install(DIRECTORY config DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
-# Install udev rules
-option(${PROJECT_NAME}_INSTALL_UDEV_RULES "Install udev rules for Razer Hydra" ON)
-if (${PROJECT_NAME}_INSTALL_UDEV_RULES)
-  install (
-    FILES config/99-hydra-indigo.rules
-    DESTINATION "/etc/udev/rules.d"
-    COMPONENT "udev")
-else ()
-  message (STATUS "Udev rules for Razer Hydra not being installed, install them with -DINSTALL_RAZER_HYDRA_UDEV_RULES=ON")
-endif ()
+
+# # Install udev rules
+# option(${PROJECT_NAME}_INSTALL_UDEV_RULES "Install udev rules for Razer Hydra" ON)
+# if (${PROJECT_NAME}_INSTALL_UDEV_RULES)
+#   install (
+#     FILES config/99-hydra.rules
+#     DESTINATION "/etc/udev/rules.d"
+#     COMPONENT "udev")
+# else ()
+#   message (STATUS "Udev rules for Razer Hydra not being installed, install them with -DINSTALL_RAZER_HYDRA_UDEV_RULES=ON")
+# endif ()
